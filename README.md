@@ -19,11 +19,11 @@
 
 #### Now that you have familiarize with the console tasks. Let edit the code so you can run it the way you want to.
 
-5.	In line 29, “var Size_of_Collection = 1”, Change “1” to “The size of the Collection is:” number that is on the console task. (Look at #3)
+5.	In line 29, “var Size_of_Collection = *1*”, Change “1” to “The size of the Collection is:” number that is on the console task. (Look at #3)
 
-6.	Line 30, “var exporting = true”, Change “true” to “false” if you don’t want to export the data.
+6.	Line 30, “var exporting = *true*”, Change “true” to “false” if you don’t want to export the data.
 
-7.	Line 31, “var folderName = 'LANDSAT8'”, Change “LANDSAT8”, to whatever you want the folder name to be. This folder can be anywhere in your google drive (it can even be a drive that you are sharing with other people.) If there are no folder in your drive with that name, the folder will be created in your “My Drive”.
+7.	Line 31, “var folderName = '*LANDSAT8*'”, Change “LANDSAT8”, to whatever you want the folder name to be. This folder can be anywhere in your google drive (it can even be a drive that you are sharing with other people.) If there are no folder in your drive with that name, the folder will be created in your “My Drive”.
 
 ![2](https://user-images.githubusercontent.com/29620463/33814414-b24b102c-ddef-11e7-83e0-f2efa98db534.PNG)
 
@@ -42,20 +42,20 @@
         
 12.	Line 45-46,
 
-        var Start = ee.Date('2013-4-11');        
-        var End = ee.Date('2017-12-07');        
+        var Start = ee.Date('*2013-4-11*');        
+        var End = ee.Date('*2017-12-07*');        
         Change the date here to any date interval you want. Follow the same date format.
         
 13.	Line 55-56,
 
-        //.sort('DATE_ACQUIRED',true);        
+        *//*.sort('DATE_ACQUIRED',true);        
         .sort('CLOUD_COVER',true);        
         If you wish to sort the images by date, move the “//” down to line 56. 
         Otherwise, the image collection will be sorted by cloud cover.
         
 14.	Line 59, 
 
-        var vizParams = {bands: ['B4', 'B3', 'B2'], 
+        var vizParams = {bands: [*'B4', 'B3', 'B2'*], 
         This can be change to display any band combinations you want.
         
 15.	Line 93-100, This is where the images are cloud masked. Shouldn’t be touch since the databases already define this function.
