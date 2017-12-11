@@ -74,3 +74,25 @@
 19.     Don't forget to hit the "Display Background Value" in symbology in ArcMap to view the images properly.
 ![5](https://user-images.githubusercontent.com/29620463/33814787-55e40e44-ddf2-11e7-8182-553c2f854651.PNG)
 
+
+
+
+
+
+
+
+
+## Example of a Test run on a single day.
+
+This is the output of the satellite image.
+![satellite_image](https://user-images.githubusercontent.com/29620463/33815127-a408e638-ddf4-11e7-94cb-29751aec4f24.PNG)
+
+Satellite image with Cloud masking applied. Also mask cloud shadows.
+![satellite_image_masked](https://user-images.githubusercontent.com/29620463/33815167-f7c4366a-ddf4-11e7-8a04-26c30e5ad41e.PNG)
+
+MNDWI Calculation applied on the original satellite image.
+![satellite_image_mndwi](https://user-images.githubusercontent.com/29620463/33815210-51759e1a-ddf5-11e7-96c8-b376be697911.PNG)
+
+MNDWI Calculation applied on the cloud masked satellite image.
+![satellite_image_masked_mndwi](https://user-images.githubusercontent.com/29620463/33815209-516488d2-ddf5-11e7-8e7e-f1565a6dddb0.PNG)
+
