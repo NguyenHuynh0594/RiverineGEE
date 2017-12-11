@@ -21,13 +21,13 @@
 
 ![3](https://user-images.githubusercontent.com/29620463/33814493-1df836e2-ddf0-11e7-87dc-d056e779d5a8.PNG)
 
-#### Now that you have familiarize with the console tasks. Let edit the code so you can run it the way you want to.
+#### Now that you have familiarize with the console tasks. Let's edit the code so you can run it the way you want to.
 
 5.	In line 29, “var Size_of_Collection = **1**”, Change “1” to “The size of the Collection is:” number that is on the console task. (Look at #3)
 
 6.	Line 30, “var exporting = **true**”, Change “true” to “false” if you don’t want to export the data.
 
-7.	Line 31, “var folderName = '**LANDSAT8**'”, Change “LANDSAT8”, to whatever you want the folder name to be. This folder can be anywhere in your google drive (it can even be a drive that you are sharing with other people.) If there are no folder in your drive with that name, the folder will be created in your “My Drive”.
+7.	Line 31, “var folderName = '**LANDSAT8**'”, Change “LANDSAT8”, to whatever you want the folder name to be. This folder can be anywhere in your google drive (it can even be a drive that you are sharing with other people.) If there are no folders in your drive with that name, the folder will be created in your “My Drive”.
 
 ![2](https://user-images.githubusercontent.com/29620463/33814414-b24b102c-ddef-11e7-83e0-f2efa98db534.PNG)
 
