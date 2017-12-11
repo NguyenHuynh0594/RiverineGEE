@@ -1,6 +1,6 @@
 # RiverineGEE
 
-Cloud Masking and Compute MNDWI around Mission River near Refugio, Texas using Google Earth Engine.
+###Cloud Masking and Compute MNDWI around Mission River near Refugio, Texas using Google Earth Engine.
 
 Google Earth Engine Riverine Code Manual.
 
@@ -14,6 +14,8 @@ Google Earth Engine Riverine Code Manual.
 3.	On the right tool bar, click on “Console”. This will display the information that is needed (Date of each images, and the number of images that was acquired from the satellite for the selected dates). The number of images is noted as “The size of the Collection is:”. This number is important since you will be needing to add it into the code later.
 
 4.	Next to the “Console” tab in the right tool bar, the “Tasks” tab is to run any exporting events that you need. Click “Tasks”, then for each image that you want to export, hit “Run” and hit “Run” again when a window popped up.
+
+![3](https://user-images.githubusercontent.com/29620463/33814493-1df836e2-ddf0-11e7-87dc-d056e779d5a8.PNG)
 
 Now that you have familiarize with the console tasks. Let edit the code so you can run it the way you want to.
 
