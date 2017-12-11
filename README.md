@@ -55,7 +55,7 @@
         
 14.	Line 59, 
 
-        var vizParams = {bands: [*'B4', 'B3', 'B2'*], 
+        var vizParams = {bands: ['B4', 'B3', 'B2'], 
         This can be change to display any band combinations you want.
         
 15.	Line 93-100, This is where the images are cloud masked. Shouldn’t be touch since the databases already define this function.
