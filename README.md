@@ -68,15 +68,11 @@
 
 17.	Line 125-128, These are the naming scheme for each image. Pretty self-explanatory, but this is where you can change it if you wish.
 
-18.	Line 134-167, This is where the exporting happens. The images will be exported with all of the bands listed here.
+18.	Line 123, If you have a specific day that you want to look at and know the number that was assigned to it. Change **0** to that number and **Size_of_Collection** to that number + 1. for(var x = 0; x<Size_of_Collection; x++)  Ex: You want to display image # 25  for(var x = **25**; x<**26**; x++)
 
-19.     Line 123, If you have a specific day that you want to look at and know the number that was assigned to it. Change **0** to that number and **Size_of_Collection** to that number + 1.        
-        for(var x = 0; x<Size_of_Collection; x++)
-        
-        Ex: You want to display image # 25
-        for(var x = **25**; x<**26**; x++)
+19. Line 134-167, This is where the exporting happens. The images will be exported with all of the bands listed here.
 
-20.     Don't forget to hit the "Display Background Value" in symbology in ArcMap to view the images properly.
+20. Don't forget to hit the "Display Background Value" in symbology in ArcMap to view the images properly.
 ![5](https://user-images.githubusercontent.com/29620463/33814787-55e40e44-ddf2-11e7-8182-553c2f854651.PNG)
 
 
