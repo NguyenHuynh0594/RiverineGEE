@@ -45,23 +45,22 @@
 11.	Line 38, “var thresholdValue = 0.0”.        
         This value is the threshold value that determine the water threshold. Change “0.0” to any number you want. (Recommended -1.0 to 1.0)
         
-12.	Line 45-46,
+12.	Line 45-46, Change the date here to any date interval you want. Follow the same date format.
 
         var Start = ee.Date('2013-4-11');        
         var End = ee.Date('2017-12-07');        
-        Change the date here to any date interval you want. Follow the same date format.
         
-13.	Line 55-56,
+        
+13.	Line 55-56, If you wish to sort the images by date, move the “//” down to line 56. Otherwise, the image collection will be sorted by cloud cover.
 
         *//*.sort('DATE_ACQUIRED',true);        
         .sort('CLOUD_COVER',true);        
         If you wish to sort the images by date, move the “//” down to line 56. 
         Otherwise, the image collection will be sorted by cloud cover.
         
-14.	Line 59, 
+14.	Line 59, This can be change to display any band combinations you want.
 
-        var vizParams = {bands: ['B4', 'B3', 'B2'], 
-        This can be change to display any band combinations you want.
+        var vizParams = {bands: ['B4', 'B3', 'B2'],         
         
 15.	Line 93-100, This is where the images are cloud masked. Shouldn’t be touch since the databases already define this function.
 
@@ -71,7 +70,13 @@
 
 18.	Line 134-167, This is where the exporting happens. The images will be exported with all of the bands listed here.
 
-19.     Don't forget to hit the "Display Background Value" in symbology in ArcMap to view the images properly.
+19.     Line 123, If you have a specific day that you want to look at and know the number that was assigned to it. Change **0** to that number and **Size_of_Collection** to that number + 1.        
+        for(var x = 0; x<Size_of_Collection; x++)
+        
+        Ex: You want to display image # 25
+        for(var x = **25**; x<**26**; x++)
+
+20.     Don't forget to hit the "Display Background Value" in symbology in ArcMap to view the images properly.
 ![5](https://user-images.githubusercontent.com/29620463/33814787-55e40e44-ddf2-11e7-8182-553c2f854651.PNG)
 
 
