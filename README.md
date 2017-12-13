@@ -87,13 +87,15 @@
         Ex:     description: name_of_Sat_Image,
         to:     description: outputName,
 
-19. Line 162-192, This is where the exporting happens. The images will be exported with all of the bands listed here. If you don't want the black border around your satellite images, the replace: 
+19. Line 162-192, This is where the exporting happens. The images will be exported with the bands selected and displayed on that map from step 14. This will also allow you to hide the black border around the images in arcMap, but it will only contains those 3 bands. If you want to export with all the bands for your satellite images, the move the **//** from line 163 to 164 and 172 to 173: 
 
-        .select(['B1', 'B2', 'B3', 'B4','B5', 'B6', 'B7', 'B8', 'B9'])
-        with
-        .visualize(vizParams)
+        //image: Sat_Images_List[x].select(['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7']),
+        image: Sat_Images_List[x].visualize(vizParams),
         
-    This will let you download and display the bands noted in step 14 and enable you to disable black bordering around your images.
+        to
+        
+        image: Sat_Images_List[x].select(['B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7']),
+        //image: Sat_Images_List[x].visualize(vizParams),
 
 20. Don't forget to hit the "Display Background Value" in symbology in ArcMap to view the images properly.
 ![5](https://user-images.githubusercontent.com/29620463/33814787-55e40e44-ddf2-11e7-8182-553c2f854651.PNG)
