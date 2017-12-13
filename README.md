@@ -6,10 +6,10 @@
 
 1.	Click on the provided links, (There are 4 different links, one for each LANDSAT imagery)        
         The current code will run on one day of the collection. This will display an example of the process that the code can do.
-            https://code.earthengine.google.com/e05c3e3d082e076e9afd2709b2a2b9f4 **Landsat 8**  
-            https://code.earthengine.google.com/e5d943bb09f52a7745c93e154b0b4d02 **Landsat 7**  
-            https://code.earthengine.google.com/fbbd19b49685a9da547e226a0e577718 **Landsat 5**  
-            https://code.earthengine.google.com/67043d152d18ee9b7bfb53f71660be20 **Landsat 4**       
+            https://code.earthengine.google.com/febfe5b541e1648ffd42c684d5bcdcf2 **Landsat 8**  
+            https://code.earthengine.google.com/3e534bf1d648949d371a932f157de0fa **Landsat 7**  
+            https://code.earthengine.google.com/f7a4d247493c745dbacd2fd7c4ce4fff **Landsat 5**  
+            https://code.earthengine.google.com/d50f0ca4c44cdcc253fae2c42d015569 **Landsat 4**       
     **If links doesn't work, you can download the associated script and copy/paste the script content into the code area at https://code.earthengine.google.com/.**
 2.	On the right tool bar, there are 3 different tabs. The “**Inspector**” tab lets you analyze the data at any pixel you click on the map.
 
