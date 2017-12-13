@@ -160,16 +160,18 @@ for(var x = 0; x<Size_of_Collection; x++)
   if(exporting === true)
   {
     Export.image.toDrive({
-      image: Sat_Images_List[x].select(['B1', 'B2', 'B3', 'B4','B5', 'B6', 'B7', 'B8', 'B9']),
-      description: name_of_Sat_Image,
+      //image: Sat_Images_List[x].select(['B1', 'B2', 'B3', 'B4','B5', 'B6', 'B7', 'B8', 'B9']),
+      image: Sat_Images_List[x].visualize(vizParams),
+      description: 'LANDSAT8_' + name_of_Sat_Image,
       folder: folderName,
       scale: exportScale,
       region : AOI,
       skipEmptyTiles : true
     });
     Export.image.toDrive({
-      image: Sat_Cloud_Masked_Images_List[x].select(['B1', 'B2', 'B3', 'B4','B5', 'B6', 'B7', 'B8', 'B9']),
-      description: name_of_Cloud_Masked_Image,
+      //image: Sat_Cloud_Masked_Images_List[x].select(['B1', 'B2', 'B3', 'B4','B5', 'B6', 'B7', 'B8', 'B9']),
+      image: Sat_Cloud_Masked_Images_List[x].visualize(vizParams),
+      description: 'LANDSAT8_' + name_of_Cloud_Masked_Image,
       folder: folderName,
       scale: exportScale,
       region : AOI,
@@ -177,7 +179,7 @@ for(var x = 0; x<Size_of_Collection; x++)
     });
     Export.image.toDrive({
       image: NDWI_Images_List[x].visualize(ndwiViz),
-      description: name_of_NDWI_Image,
+      description: 'LANDSAT8_' + name_of_NDWI_Image,
       folder: folderName,
       scale: exportScale,
       region : AOI,
@@ -185,7 +187,7 @@ for(var x = 0; x<Size_of_Collection; x++)
     });
     Export.image.toDrive({
       image: NDWI_Images_List_WithOut_Cloud_Mask[x].visualize(ndwiViz),
-      description: name_of_NDWI_Without_CloudMask_Image,
+      description: 'LANDSAT8_' + name_of_NDWI_Without_CloudMask_Image,
       folder: folderName,
       scale: exportScale,
       region : AOI,
