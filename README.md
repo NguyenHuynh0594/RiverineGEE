@@ -6,11 +6,11 @@
 
 1.	Click on the provided links, (There are 4 different links, one for each LANDSAT imagery)        
         The current code will run on one day of the collection. This will display an example of the process that the code can do.
-        https://code.earthengine.google.com/6ab54a2762ac681fafaaa47b9ade85ab **Landsat 8**
-        https://code.earthengine.google.com/05e3d0843cfe0e099643f377fa749b7e **Landsat 7**
-        https://code.earthengine.google.com/2cf07625fb56ceb513e12945dd2c1d5d **Landsat 5**
-        https://code.earthengine.google.com/a1c92a27a9b37063ee4d193313a211ba **Landsat 4**        
-**If links doesn't work, you can download the associated script and copy/paste the script content into the code area at https://code.earthengine.google.com/.**
+        https://code.earthengine.google.com/e05c3e3d082e076e9afd2709b2a2b9f4 **Landsat 8**  
+        https://code.earthengine.google.com/e5d943bb09f52a7745c93e154b0b4d02 **Landsat 7**  
+        https://code.earthengine.google.com/fbbd19b49685a9da547e226a0e577718 **Landsat 5**  
+        https://code.earthengine.google.com/67043d152d18ee9b7bfb53f71660be20 **Landsat 4**       
+    **If links doesn't work, you can download the associated script and copy/paste the script content into the code area at https://code.earthengine.google.com/.**
 2.	On the right tool bar, there are 3 different tabs. The “**Inspector**” tab lets you analyze the data at any pixel you click on the map.
 
 ![1](https://user-images.githubusercontent.com/29620463/33814295-e989ac34-ddee-11e7-98f1-176ee81198be.PNG)
@@ -52,30 +52,48 @@
         
         
 13.	Line 55-56, If you wish to sort the images by date, move the “//” down to line 56. Otherwise, the image collection will be sorted by cloud cover.
-
-        *//*.sort('DATE_ACQUIRED',true);        
-        .sort('CLOUD_COVER',true);        
-        If you wish to sort the images by date, move the “//” down to line 56. 
+               
+        .sort('CLOUD_COVER',true);
+        *//*.sort('DATE_ACQUIRED',true); 
+        If you wish to sort the images by date, move the “//” up to line 55. 
         Otherwise, the image collection will be sorted by cloud cover.
         
 14.	Line 59, This can be change to display any band combinations you want.
 
         var vizParams = {bands: ['B4', 'B3', 'B2'],         
         
-15.	Line 93-100, This is where the images are cloud masked. Shouldn’t be touch since the databases already define this function.
+15.	Line 94-102, This is where the images are cloud masked. Shouldn’t be touch since the databases already define this function.
 
-16.	Line 103-118, The applied the MNDWI calculation to the images. You can change the bands that are used for NDWI calculation here.
+16.	Line 105-120, The applied the MNDWI calculation to the images. You can change the bands that are used for NDWI calculation here.
 
-17.	Line 125-128, These are the naming scheme for each image. Pretty self-explanatory, but this is where you can change it if you wish.
-
-18.	Line 123, If you have a specific day that you want to look at and know the number that was assigned to it. Change **0** to that number and **Size_of_Collection** to that number + 1.
+17.	Line 125, If you have a specific day that you want to look at and know the number that was assigned to it. Change **0** to that number and **Size_of_Collection** to that number + 1.
   
         for(var x = 0; x<Size_of_Collection; x++)
         
         Ex: You want to display image # 25
         for(var x = 25; x<26; x++)
 
-19. Line 134-167, This is where the exporting happens. The images will be exported with all of the bands listed here.
+
+18.	Line 151-154, These are the naming scheme for each image. Pretty self-explanatory, but this is where you can change it if you wish. The current naming schemes are: 
+
+        Sat_Image_x_yyyymmddhhmmss
+        CM_Sat_Image_x_yyyymmddhhmmss
+        NDWI_Image_CM_x_yyyymmddhhmmss
+        NDWI_Image_WO_CM_x_yyyymmddhhmmss
+        
+    Where **x** is the number of the image, **CM** denotes Cloud Masked, **WO_CM** denotes Without Cloud Masked, yyyymmddhhmmss is in the following order: year,month,date,hour,minute,second.
+    If you only wish the name to contains only the date and time, simply replace lines 164,172,180,188 after **discription:** with **outputName**.
+        
+        Ex:     description: name_of_Sat_Image,
+        to:     description: outputName,
+
+19. Line 162-192, This is where the exporting happens. The images will be exported with all of the bands listed here. If you don't want the black border around your satellite images, the replace: 
+
+        .select(['B1', 'B2', 'B3', 'B4','B5', 'B6', 'B7', 'B8', 'B9'])
+        with
+        .visualize(vizParams)
+        
+    This will let you download and display the bands noted in step 14 and enable you to disable black bordering around your images.
 
 20. Don't forget to hit the "Display Background Value" in symbology in ArcMap to view the images properly.
 ![5](https://user-images.githubusercontent.com/29620463/33814787-55e40e44-ddf2-11e7-8182-553c2f854651.PNG)
